@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h2 {
+        @apply text-xl;
+        @apply font-medium;
+    }
+}
+
+@layer components {}
+
+@layer utilities {
+    .text-shadow {
+        text-shadow: 0 0 12px #00000075;
+    }
+}

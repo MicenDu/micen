@@ -15,4 +15,16 @@
     .text-shadow {
         text-shadow: 0 0 12px #00000075;
     }
+
+    .glass {
+        @apply bg-glass-white-4;
+        @apply backdrop-blur-xl;
+    }
+
+    .glass-border {
+        @apply bg-glass-white-4;
+        @apply backdrop-blur-xl;
+        @apply border-glass-white-2;
+        @apply border-2;
+    }
 }

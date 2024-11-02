@@ -1,4 +1,5 @@
 // const colors = require("tailwindcss/colors");
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
     content: [
         "./components/**/*.{js,vue,ts}",
@@ -15,6 +16,9 @@ module.exports = {
                 'primary-blue': 'rgba(39, 96, 241, 1)',
                 'light-green': 'rgba(204, 243, 129, 1)',
                 'light-pink': 'rgba(238, 174, 202, 1)',
+            },
+            fontFamily: {
+                'sans': ['Noto Sans SC', ...defaultTheme.fontFamily.sans],
             }
         },
     },

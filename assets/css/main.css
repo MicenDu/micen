@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+    @font-face {
+        font-family: 'Noto Sans SC';
+        src: url('../fonts/NotoSansSC-VariableFont_wght.ttf') format('truetype-variations');
+        font-weight: 100 900;
+        font-display: swap;
+    }
+
     h2 {
         @apply text-xl;
         @apply font-medium;

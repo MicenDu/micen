@@ -13,7 +13,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
     '@nuxtjs/strapi',
-    '@nuxtjs/algolia'
+    '@nuxtjs/algolia',
+    '@nuxt/image'
   ],
   strapi: {
     // Options

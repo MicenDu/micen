@@ -16,6 +16,12 @@ export default defineNuxtConfig({
     '@nuxtjs/algolia',
     '@nuxt/image'
   ],
+  alias: {
+    assets: '/<rootDir>/assets',
+  },
+  image: {
+    format:['avif', 'webp'],
+  },
   strapi: {
     // Options
       url: process.env.STRAPI_URL || 'http://localhost:1337',

@@ -26,6 +26,7 @@
     .glass {
         @apply bg-glass-white-4;
         @apply backdrop-blur-xl;
+        @apply shadow-sm;
     }
 
     .glass-border {
@@ -33,5 +34,6 @@
         @apply backdrop-blur-xl;
         @apply border-glass-white-2;
         @apply border-2;
+        @apply shadow-sm;
     }
 }

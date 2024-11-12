@@ -4,7 +4,7 @@
             class="justify-center flex fixed top-0 left-0 right-0 z-40 bg-glass-white-4 backdrop-blur-xl md:backdrop-blur-md">
             <nav class="container justify-between items-center h-14 mx-16 hidden md:flex ">
                 <div class="flex gap-8 items-center">
-                    <a href="">
+                    <a href="/">
                         <img src="@/assets/Logo-50.png" alt="" class="stroke-1">
                     </a>
                     <menu class="flex gap-5 text-zinc-600 items-center">

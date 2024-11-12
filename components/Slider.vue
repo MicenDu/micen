@@ -49,7 +49,7 @@ let curSlide = ref(0);
 let cardWidth = ref(0);
 const maxSlide = quotes.length;
 
-
+//button color
 const prevClass = computed(() => {
     return {
         'fill-zinc-300': curSlide.value === 0,
@@ -85,12 +85,7 @@ const handleKeydown = (e) => {
     if (e.key === 'ArrowLeft') prevSlide()
     if (e.key === 'ArrowRight') nextSlide()
 }
-const translateX = computed(() => {
-    return `translateX(-${currentIndex.value * 100}%)`
-})
-const arrrowsColor = computed(() => {
 
-})
 onMounted(() => {
     console.log("onMounted");
     const quoteCards = document.querySelectorAll('#quote-card');
@@ -100,8 +95,8 @@ onMounted(() => {
         cardWidth.value = quoteCards[0].offsetWidth + 32;
     }
     console.log('Width:' + cardWidth.value);
-
     console.log('cur' + curSlide.value);
+
     window.addEventListener('keydown', handleKeydown)
 })
 </script>

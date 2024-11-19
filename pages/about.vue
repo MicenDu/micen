@@ -1,0 +1,172 @@
+<template>
+    <div class="grid grid-cols-1 md:max-w-7xl mx-auto gap-4 grid-flow-dense md:grid-cols-3 ">
+        <section class="container mx-auto md:col-span-3 md:mb-4">
+            <div class="m-5 pt-20">
+                <!-- <div class="flex justify-start gap-4 items-center xl:flex-row-reverse xl:justify-center xl:gap-14"> -->
+                <div class="grid grid-cols-2 gap-8 items-center md:grid-cols-3">
+                    <div class="md:col-span-2">
+                        <h1
+                            class="text-3xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit md:text-5xl">
+                            Micen</h1>
+                        <p class="text-zinc-500 my-2 leading-6 text-sm md:text-2xl">用户体验设计师 / 也搞前端 / 还拍点照片</p>
+                    </div>
+                    <img class="h-20 w-20 rounded-full mx-auto md:-order-1 md:w-40 md:h-40"
+                        src="../public/images/ellipse.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="container md:px-5">
+            <div class="m-5 ">
+                <SectionTitle class="font-medium">关于我</SectionTitle>
+                <p class="text-gray-500 mb-2 leading-8 text-sm w-fit">一名用户体验设计师、SDE(Someone Does
+                    Everything)。工业设计出身，但接触前端后，对其有着极大兴趣。于是自己设计了亿下个人网站，在此留下一些自己的想法和痕迹。</p>
+            </div>
+        </section>
+        <section class="container md:col-span-2 md:row-span-3">
+            <div class="m-5">
+                <SectionTitle class="font-medium">擅长工具</SectionTitle>
+                <ToolCardStack v-for="stack in toolsData">
+                    <template #category>{{ stack.category }}</template>
+                    <ToolCard v-for="tool in stack.tools" :iconPath="tool.iconPath" :toolName="tool.toolName"
+                        :toolLink="tool.toolLink">
+                        <img :src="tool.iconPath" alt="">
+                        <template #toolName>{{ tool.toolName }}</template>
+                        <template #toolFunction>{{ tool.toolFunction }}</template>
+                    </ToolCard>
+                </ToolCardStack>
+            </div>
+        </section>
+        <section class="container md:px-5">
+            <div class="m-5">
+                <SectionTitle class="font-medium">其他技能</SectionTitle>
+                <div class="flex flex-wrap gap-2">
+                    <Tag v-for="tag in tags" :key="tag" class="bg-zinc-100 font-normal text-sm w-fit">{{ tag }}</Tag>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+</template>
+
+<script setup>
+const toolsData = [
+    {
+        category: "设计",
+        tools: [
+            {
+                toolName: "Figma",
+                toolFunction: "UI/UX设计",
+                iconPath: "/tools/figma.svg",
+                toolLink: 'https://www.figma.com/',
+            },
+            {
+                toolName: "Photoshop",
+                toolFunction: "图片处理",
+                iconPath: "/tools/photoshop.svg",
+                toolLink: 'https://www.adobe.com/products/photoshop.html',
+
+            },
+            {
+                toolName: "Powerpoint",
+                toolFunction: "幻灯片演示",
+                iconPath: "/tools/powerpoint.svg",
+                toolLink: 'https://www.microsoft.com/zh-cn/microsoft-365/powerpoint'
+
+            },
+        ]
+    },
+    {
+        category: "前端",
+        tools: [
+            {
+                toolName: "Vue",
+                toolFunction: "前端框架",
+                iconPath: "/tools/vue.svg",
+                toolLink: 'https://v3.cn.vuejs.org/'
+            },
+            {
+                toolName: "Nuxt",
+                toolFunction: "通用应用框架",
+                iconPath: "/tools/nuxt.svg",
+                toolLink: 'https://nuxt.com.cn/'
+            },
+            {
+                toolName: "Javascript",
+                toolFunction: "编程语言",
+                iconPath: "/tools/javascript.svg",
+                toolLink: 'https://zh.javascript.info/'
+            },
+            {
+                toolName: "HTML",
+                toolFunction: "超文本标记语言",
+                iconPath: "/tools/html.svg",
+                toolLink: 'https://developer.mozilla.org/zh-CN/docs/Web/HTML'
+            },
+            {
+                toolName: "CSS",
+                toolFunction: "层叠样式表",
+                iconPath: "/tools/css.svg",
+                toolLink: 'https://developer.mozilla.org/zh-CN/docs/Web/CSS'
+
+            },
+
+        ]
+    },
+    {
+        category: "影视",
+        tools: [
+            {
+                toolName: "DaVinci Resolve",
+                toolFunction: "视频调色",
+                iconPath: "/tools/davinci.svg",
+                toolLink: 'https://www.blackmagicdesign.com/products/davinciresolve/'
+            },
+            {
+                toolName: "CapCut",
+                toolFunction: "视频剪辑",
+                iconPath: "/tools/capcut.svg",
+                toolLink: 'https://www.capcut.com/'
+
+            },
+            {
+                toolName: "Lightroom",
+                toolFunction: "图像后期",
+                iconPath: "/tools/lightroom.svg",
+                toolLink: 'https://www.adobe.com/products/photoshop-lightroom.html'
+            },
+
+        ]
+    },
+    {
+        category: "效率",
+        tools: [
+            {
+                toolName: "飞书",
+                toolFunction: "高效办公",
+                iconPath: "/tools/feishu.svg",
+                toolLink: 'https://www.feishu.cn/'
+            },
+            {
+                toolName: "ChatGPT",
+                toolFunction: "AI 对话",
+                iconPath: "/tools/chatgpt.svg",
+                toolLink: 'https://chatgpt.com/'
+            },
+            {
+                toolName: "Github",
+                toolFunction: "代码托管",
+                iconPath: "/tools/github.svg",
+                toolLink: 'https://github.com/'
+            },
+            {
+                toolName: "Notion",
+                toolFunction: "笔记管理",
+                iconPath: "/tools/notion.svg",
+                toolLink: 'https://www.notion.so/'
+            }
+        ]
+    }
+]
+const tags = ['IT 运维', '空调清洁', '司机师傅', '做饭洗碗', '撸猫铲屎', '通厕所', '墙面打孔']
+</script>

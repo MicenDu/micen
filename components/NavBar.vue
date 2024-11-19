@@ -1,17 +1,30 @@
+<script setup>
+const showMenu = ref(false);
+const light = ref(false);
+const colorMode = useColorMode()
+console.log(colorMode.preference)
+const navigation = [
+    { name: '首页', href: '/' },
+    { name: '项目', href: '/projects' },
+    { name: '生活', href: '/life' },
+    { name: '关于', href: '/about' },
+]
+</script>
+
 <template>
     <div>
         <header
-            class="justify-center flex fixed top-0 left-0 right-0 z-40 bg-glass-white-4 backdrop-blur-xl md:backdrop-blur-md">
+            class="justify-center flex fixed top-0 left-0 right-0 z-40 bg-glass-white-4 backdrop-blur-md shadow-xs border-b-1 border-white/20  dark:bg-stone-800/40">
             <nav class="container justify-between items-center h-14 mx-16 hidden md:flex ">
                 <div class="flex gap-8 items-center">
                     <a href="/">
                         <img src="@/assets/Logo-50.png" alt="" class="stroke-1">
                     </a>
-                    <menu class="flex gap-5 text-zinc-600 items-center">
-                        <li><a href="/">首页</a></li>
-                        <li><a href="/projects">项目</a></li>
-                        <li><a href="/life">生活</a></li>
-                        <li><a href="/about">关于</a></li>
+                    <menu class="flex gap-5 text-zinc-600 items-center dark:text-zinc-300">
+                        <li v-for="item in navigation" :key="item.name">
+                            <a :href="item.href">{{
+                                item.name }}</a>
+                        </li>
                         <!-- <li>
                             <button>
                                 <img src="../assets/icons/Search.svg" alt="">
@@ -23,8 +36,11 @@
                     <!-- <button>
                         <img src="../assets/icons/Translate.svg" alt="">
                     </button> -->
-                    <button>
+                    <button @click="$colorMode.preference = 'dark'" v-show="$colorMode.preference == 'light'">
                         <img src="../assets/icons/Moon.svg" alt="">
+                    </button>
+                    <button @click="$colorMode.preference = 'light'" v-show="$colorMode.preference == 'dark'">
+                        <img src="../assets/icons/Sun.svg" alt="">
                     </button>
                     <a href="">
                         <img src="../assets/icons/Github.svg" alt="">
@@ -40,9 +56,12 @@
                     </a>
                     <ul class="flex gap-4 items-start pt-2">
                         <li v-show="!showMenu">
-                            <button>
+                            <button @click="$colorMode.preference = 'dark'" v-show="$colorMode.preference == 'light'">
                                 <!-- <img src="../assets/icons/Search.svg" alt=""> -->
                                 <img src="../assets/icons/Moon.svg" alt="">
+                            </button>
+                            <button @click="$colorMode.preference = 'light'" v-show="$colorMode.preference == 'dark'">
+                                <img src="../assets/icons/Sun.svg" alt="">
                             </button>
                         </li>
                         <li v-show="!showMenu">
@@ -59,10 +78,10 @@
                 </div>
                 <div class="flex justify-between items-end mt-2 mb-4 transition ease-in-out" v-show="showMenu">
                     <menu class="space-y-2 text-zinc-500 text-xl pl-2 ">
-                        <li><a href="/">首页</a></li>
-                        <li><a href="/projects">项目</a></li>
-                        <li><a href="/life">生活</a></li>
-                        <li><a href="/about">关于</a></li>
+                        <li v-for="item in navigation" :key="item.name">
+                            <a :href="item.href">{{
+                                item.name }}</a>
+                        </li>
                     </menu>
                     <!-- <ul class="flex justify-between w-fit gap-4">
                         <li>
@@ -81,7 +100,3 @@
         </header>
     </div>
 </template>
-
-<script setup>
-const showMenu = ref(false);
-</script>

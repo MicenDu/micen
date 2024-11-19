@@ -1,6 +1,6 @@
 <template>
     <div class="w-fit h-auto">
-        <a :href="toolLink" class="flex flex-row items-center justify-center gap-4 ">
+        <a :href="toolLink" class="flex flex-row items-center justify-center gap-4" target="_blank">
             <img :src="iconPath" :alt="toolName" class="w-10 h-10">
             <div class="flex flex-col justify-center  gap-0.5">
                 <p class="font-medium text-sm text-neutral-700">

@@ -3,37 +3,51 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: 'Noto Sans SC';
-        src: url('../fonts/NotoSansSC-VariableFont_wght.ttf') format('truetype-variations');
-        font-weight: 100 900;
-        font-display: swap;
-    }
+  @font-face {
+    font-family: "Noto Sans SC";
+    src: url("../fonts/NotoSansSC-VariableFont_wght.ttf")
+      format("truetype-variations");
+    font-weight: 100 900;
+    font-display: swap;
+  }
 
-    h2 {
-        @apply text-xl;
-        @apply font-medium;
-    }
+  h2 {
+    @apply text-xl;
+    @apply font-medium;
+  }
 }
 
-@layer components {}
+@layer components {
+}
 
 @layer utilities {
-    .text-shadow {
-        text-shadow: 0 0 12px #00000075;
-    }
+  .text-shadow {
+    text-shadow: 0 0 12px #00000075;
+  }
 
-    .glass {
-        @apply bg-glass-white-4;
-        @apply backdrop-blur-xl;
-        @apply shadow-sm;
-    }
+  .glass {
+    @apply bg-white/40;
+    @apply backdrop-blur-xl;
+    @apply shadow-sm;
+  }
 
-    .glass-border {
-        @apply bg-glass-white-4;
-        @apply backdrop-blur-xl;
-        @apply border-glass-white-2;
-        @apply border-2;
-        @apply shadow-sm;
-    }
+  .glass-border {
+    @apply bg-white/40;
+    @apply backdrop-blur-xl;
+    @apply border-white/20;
+    @apply border-2;
+    @apply shadow-sm;
+  }
+  .dark-mode .glass-border {
+    @apply bg-zinc-900/20;
+    @apply backdrop-blur-xl;
+    @apply border-zinc-800/20;
+    @apply border;
+    @apply shadow-sm;
+  }
+  .dark-mode .glass {
+    @apply bg-stone-800/30;
+    @apply backdrop-blur-xl;
+    @apply shadow-sm;
+  }
 }

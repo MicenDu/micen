@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     '@nuxtjs/strapi',
     '@nuxtjs/algolia',
     '@nuxt/image',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxt/content'
   ],
   alias: {
     assets: '/<rootDir>/assets',

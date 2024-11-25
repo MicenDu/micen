@@ -14,7 +14,7 @@ const navigation = [
 <template>
     <div>
         <header
-            class="justify-center flex fixed top-0 left-0 right-0 z-40 bg-glass-white-4 backdrop-blur-md shadow-xs border-b-1 border-white/20  dark:bg-stone-800/40">
+            class="justify-center flex fixed top-0 left-0 right-0 z-40 bg-glass-white-4 backdrop-blur-md shadow-xs border-b-1 border-white/20  dark:bg-black/30">
             <nav class="container justify-between items-center h-14 mx-16 hidden md:flex ">
                 <div class="flex gap-8 items-center">
                     <a href="/">
@@ -36,7 +36,7 @@ const navigation = [
                     <!-- <button>
                         <img src="../assets/icons/Translate.svg" alt="">
                     </button> -->
-                    <button @click="$colorMode.preference = 'dark'" v-show="$colorMode.preference == 'light'">
+                    <button @click="$colorMode.preference = 'dark'" v-show="$colorMode.preference != 'dark'">
                         <img src="../assets/icons/Moon.svg" alt="">
                     </button>
                     <button @click="$colorMode.preference = 'light'" v-show="$colorMode.preference == 'dark'">

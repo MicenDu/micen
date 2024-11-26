@@ -40,7 +40,7 @@
             <div class="m-5">
                 <SectionTitle class="font-medium">其他技能</SectionTitle>
                 <div class="flex flex-wrap gap-2">
-                    <Tag v-for="tag in tags" :key="tag" class="bg-zinc-100 font-normal text-sm w-fit">{{ tag }}</Tag>
+                    <Tag v-for="tag in tags" :key="tag">{{ tag }}</Tag>
                 </div>
             </div>
         </section>

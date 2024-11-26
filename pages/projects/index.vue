@@ -20,21 +20,18 @@
 <script setup>
 const projectsData = [
     {
-        title: "项目标题1",
+        title: " 项目标题1",
         description: "项目描述内容...",
         year: "2024",
         region: "中国、非洲",
         link: "/projects/1",
         imgUrl: "/images/projects/project.webp"
-    },
-    {
+    }, {
         title: "项目标题2",
         description: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.",
         year: "2024",
         region: "非洲",
         link: "/projects/2",
         imgUrl: "/images/projects/mosquito.png"
-    },
-]
-
+    },];
 </script>

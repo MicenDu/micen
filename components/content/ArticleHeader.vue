@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-center">
-        <div class="flex flex-col gap-3 items-center">
+        <div class="flex flex-col gap-3 items-center w-full">
             <div class="text-center">
                 <p class="text-primary-blue text-2xl md:text-4xl font-medium mb-5 mt-3">
                     {{ title }}
@@ -15,7 +15,7 @@
                     {{ tag }}
                 </a>
             </div>
-            <img :src="image" :alt="alt" class="mt-3">
+            <img :src="image" :alt="alt" class="mt-3 w-full">
         </div>
     </div>
 </template>

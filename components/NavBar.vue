@@ -1,4 +1,8 @@
 <script setup>
+import LineMdMoonRisingTwotoneAltLoop from '~icons/line-md/moon-rising-twotone-alt-loop';
+import LineMdMoonToSunnyOutlineLoopTransition from '~icons/line-md/moon-to-sunny-outline-loop-transition';
+import LineMdMenuToCloseTransition from '~icons/line-md/menu-to-close-transition';
+import IconGithub from '~icons/mdi/github';
 const showMenu = ref(false);
 const light = ref(false);
 const colorMode = useColorMode()
@@ -14,7 +18,7 @@ const navigation = [
 <template>
     <div>
         <header
-            class="justify-center flex fixed top-0 left-0 right-0 z-40 bg-glass-white-4 backdrop-blur-md shadow-xs border-b-1 border-white/20  dark:bg-black/30">
+            class="justify-center flex fixed top-0 left-0 right-0 z-40 bg-glass-white-4 backdrop-blur-md shadow-xs border-b-1 border-white/20  dark:bg-black/40">
             <nav class="container justify-between items-center h-14 mx-16 hidden md:flex ">
                 <div class="flex gap-8 items-center">
                     <a href="/">
@@ -37,13 +41,17 @@ const navigation = [
                         <img src="../assets/icons/Translate.svg" alt="">
                     </button> -->
                     <button @click="$colorMode.preference = 'dark'" v-show="$colorMode.preference != 'dark'">
-                        <img src="../assets/icons/Moon.svg" alt="">
+                        <!-- <img src="../assets/icons/Moon.svg" alt=""> -->
+                        <line-md-moon-rising-twotone-alt-loop class="icons" />
+
                     </button>
                     <button @click="$colorMode.preference = 'light'" v-show="$colorMode.preference == 'dark'">
-                        <img src="../assets/icons/Sun.svg" alt="">
+                        <!-- <img src="../assets/icons/Sun.svg" alt=""> -->
+                        <line-md-moon-to-sunny-outline-loop-transition class="icons" />
+
                     </button>
                     <a href="">
-                        <img src="../assets/icons/Github.svg" alt="">
+                        <icon-github class="icons" />
                     </a>
                 </div>
             </nav>
@@ -58,26 +66,26 @@ const navigation = [
                         <li v-show="!showMenu">
                             <button @click="$colorMode.preference = 'dark'" v-show="$colorMode.preference == 'light'">
                                 <!-- <img src="../assets/icons/Search.svg" alt=""> -->
-                                <img src="../assets/icons/Moon.svg" alt="">
+                                <line-md-moon-rising-twotone-alt-loop class="icons " />
                             </button>
                             <button @click="$colorMode.preference = 'light'" v-show="$colorMode.preference == 'dark'">
-                                <img src="../assets/icons/Sun.svg" alt="">
+                                <line-md-moon-to-sunny-outline-loop-transition class="icons" />
                             </button>
                         </li>
                         <li v-show="!showMenu">
                             <button @click="showMenu = !showMenu">
-                                <img src="../assets/icons/Menu.svg" alt="">
+                                <i-custom-menu class="icons stroke-2" />
                             </button>
                         </li>
                         <li v-show="showMenu">
                             <button class="pr-1" @click="showMenu = !showMenu">
-                                <img src="../assets/icons/Close.svg" alt="">
+                                <line-md-menu-to-close-transition class="icons stroke-2" />
                             </button>
                         </li>
                     </ul>
                 </div>
                 <div class="flex justify-between items-end mt-2 mb-4 transition ease-in-out" v-show="showMenu">
-                    <menu class="space-y-2 text-zinc-500 text-xl pl-2 ">
+                    <menu class="space-y-2 text-zinc-500 text-xl pl-2 dark:text-zinc-300">
                         <li v-for="item in navigation" :key="item.name">
                             <a :href="item.href">{{
                                 item.name }}</a>

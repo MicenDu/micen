@@ -12,7 +12,7 @@ defineProps({
     type: String,
     required: true
   },
-  region: {
+  tags: {
     type: String,
     required: true
   },
@@ -33,19 +33,19 @@ defineProps({
       <div class="p-8 glass-border flex-col justify-between hidden col-span-4 max-h-96 lg:flex ">
         <div>
           <div class="flex justify-between items-center text-gray-400 text-sm my-4">
-            <time datetime="2023">
-              <slot name="year"></slot>
+            <time :datetime="year">
+              {{ year }}
             </time>
-            <p>
-              <slot name="region"></slot>
+            <p class="font-normal">
+              {{ tags[0] }}
             </p>
           </div>
           <div>
             <h2 class="uppercase text-zinc-600 mb-2">
-              <slot name="title"></slot>
+              {{ title }}
             </h2>
             <p class="text-gray-500 mb-2 leading-6">
-              <slot name="description"></slot>
+              {{ description }}
             </p>
           </div>
         </div>
@@ -58,20 +58,20 @@ defineProps({
           format="avif,webp" />
       </div>
       <div class="p-4 glass-border col-auto lg:hidden">
-        <div class="text-sm">
-          <h2 class=" text-zinc-600 mb-2 font-bold text-sm">
-            <slot name="title"></slot>
+        <div class="text-sm mb-4">
+          <h2 class=" text-zinc-600 font-bold text-sm">
+            {{ title }}
           </h2>
-          <p class="text-gray-500 mb-2 leading-6">
-            <slot name="description"></slot>
+          <p class="text-gray-500 leading-6 mb-2">
+            {{ description }}
           </p>
         </div>
         <div class="flex justify-between items-center text-gray-400 text-xs my-2">
+          <time :datetime="year">
+            {{ year }}
+          </time>
           <p>
-            <slot name="year"></slot>
-          </p>
-          <p>
-            <slot name="region"></slot>
+            {{ tags[0] }}
           </p>
         </div>
       </div>

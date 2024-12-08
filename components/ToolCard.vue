@@ -1,13 +1,13 @@
 <template>
-    <div class="w-fit h-auto">
-        <a :href="toolLink" class="flex flex-row items-center justify-center gap-4" target="_blank">
+    <div class="w-full h-auto rounded-sm hover:bg-zinc-200">
+        <a :href="toolLink" class="flex flex-row items-center justify-center gap-4 my-3 mx-4 " target="_blank">
             <img :src="iconPath" :alt="toolName" class="w-10 h-10">
-            <div class="flex flex-col justify-center  gap-0.5">
+            <div class="flex flex-col justify-center  gap-0.5 w-full">
                 <p class="font-medium text-sm text-neutral-700">
-                    <slot name='toolName'></slot>
+                    {{ toolName }}
                 </p>
                 <p class="text-xs text-neutral-500">
-                    <slot name="toolFunction"></slot>
+                    {{ toolFunction }}
                 </p>
             </div>
         </a>
@@ -25,6 +25,10 @@ defineProps({
         required: true
     },
     toolLink: {
+        type: String,
+        required: true
+    },
+    toolFunction: {
         type: String,
         required: true
     }

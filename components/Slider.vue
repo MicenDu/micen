@@ -1,38 +1,36 @@
 <template>
-    <div class="m-5 md:mx-20">
-        <div class="flex justify-between items-center">
-            <SectionTitle>生活</SectionTitle>
-            <div>
-                <button @click="prevSlide">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class=" hover:fill-primary-blue" :class="prevClass">
-                        <path
-                            d="M17 8.24251H4.15881L10.8025 2.08349L9.63572 1L1 9L9.63572 17L10.8025 15.9229L4.15881 9.77156H17V8.24251Z"
-                            fill-opacity="0.8" />
-                    </svg>
-                </button>
-                <button @click="nextSlide">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class=" hover:fill-primary-blue rotate-180 ml-2" :class="nextClass">
-                        <path
-                            d="M17 8.24251H4.15881L10.8025 2.08349L9.63572 1L1 9L9.63572 17L10.8025 15.9229L4.15881 9.77156H17V8.24251Z"
-                            fill-opacity="0.8" />
-                    </svg>
-                </button>
-            </div>
+    <div class="flex justify-between items-center mt-16">
+        <SectionTitle>生活</SectionTitle>
+        <div>
+            <button @click="prevSlide">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class=" hover:fill-primary-blue" :class="prevClass">
+                    <path
+                        d="M17 8.24251H4.15881L10.8025 2.08349L9.63572 1L1 9L9.63572 17L10.8025 15.9229L4.15881 9.77156H17V8.24251Z"
+                        fill-opacity="0.8" />
+                </svg>
+            </button>
+            <button @click="nextSlide">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class=" hover:fill-primary-blue rotate-180 ml-2" :class="nextClass">
+                    <path
+                        d="M17 8.24251H4.15881L10.8025 2.08349L9.63572 1L1 9L9.63572 17L10.8025 15.9229L4.15881 9.77156H17V8.24251Z"
+                        fill-opacity="0.8" />
+                </svg>
+            </button>
         </div>
-        <div class="overflow-hidden relative w-full">
+    </div>
+    <div class="overflow-hidden relative w-full">
 
-            <div class="flex gap-8 transition-transform duration-300 "
-                :style="{ transform: `translateX(${cardWidth * (-curSlide)}px)` }">
-                <QuoteCard v-for="(quote, index) in quotes" class="transition-transform duration-300" id="quote-card">
-                    <template #quote>{{ quote.quote }}</template>
-                    <template #cite>{{ quote.cite }}</template>
-                    <template #year>{{ quote.year }}</template>
-                </QuoteCard>
-            </div>
-
+        <div class="flex gap-8 transition-transform duration-300 "
+            :style="{ transform: `translateX(${cardWidth * (-curSlide)}px)` }">
+            <QuoteCard v-for="(quote, index) in quotes" class="transition-transform duration-300" id="quote-card">
+                <template #quote>{{ quote.quote }}</template>
+                <template #cite>{{ quote.cite }}</template>
+                <template #year>{{ quote.year }}</template>
+            </QuoteCard>
         </div>
+
     </div>
 </template>
 
@@ -87,15 +85,13 @@ const handleKeydown = (e) => {
 }
 
 onMounted(() => {
-    console.log("onMounted");
     const quoteCards = document.querySelectorAll('#quote-card');
     console.log(quoteCards[0].offsetWidth);
 
     if (quoteCards.length > 0) {
         cardWidth.value = quoteCards[0].offsetWidth + 32;
     }
-    console.log('Width:' + cardWidth.value);
-    console.log('cur' + curSlide.value);
+    console.log('Width:' + cardWidth.value + ' ' + 'cur' + curSlide.value);
 
     window.addEventListener('keydown', handleKeydown)
 })

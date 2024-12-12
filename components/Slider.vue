@@ -1,22 +1,14 @@
 <template>
     <div class="flex justify-between items-center mt-16">
         <SectionTitle>生活</SectionTitle>
-        <div>
+        <div class="flex gap-2">
             <button @click="prevSlide">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class=" hover:fill-primary-blue" :class="prevClass">
-                    <path
-                        d="M17 8.24251H4.15881L10.8025 2.08349L9.63572 1L1 9L9.63572 17L10.8025 15.9229L4.15881 9.77156H17V8.24251Z"
-                        fill-opacity="0.8" />
-                </svg>
+                <p class="font-serif text-4xl font-thin text-zinc-300 hover:text-primary-blue" :class="prevClass">←
+                </p>
             </button>
             <button @click="nextSlide">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class=" hover:fill-primary-blue rotate-180 ml-2" :class="nextClass">
-                    <path
-                        d="M17 8.24251H4.15881L10.8025 2.08349L9.63572 1L1 9L9.63572 17L10.8025 15.9229L4.15881 9.77156H17V8.24251Z"
-                        fill-opacity="0.8" />
-                </svg>
+                <p class="font-serif text-4xl font-thin text-zinc-300 hover:text-primary-blue" :class="nextClass">→
+                </p>
             </button>
         </div>
     </div>
@@ -50,15 +42,15 @@ const maxSlide = quotes.length;
 //button color
 const prevClass = computed(() => {
     return {
-        'fill-zinc-300': curSlide.value === 0,
-        'fill-primary-blue': curSlide.value !== 0,
+        'text-zinc-300': curSlide.value === 0,
+        'text-primary-blue/50': curSlide.value !== 0,
     };
 });
 
 const nextClass = computed(() => {
     return {
-        'fill-zinc-300': curSlide.value === maxSlide - 1,
-        'fill-primary-blue': curSlide.value !== maxSlide - 1,
+        'text-zinc-300': curSlide.value === maxSlide - 1,
+        'text-primary-blue/50': curSlide.value !== maxSlide - 1,
     };
 });
 

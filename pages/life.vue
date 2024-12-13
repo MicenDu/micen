@@ -1,29 +1,5 @@
 <script setup>
-definePageMeta({
-    layout: 'default'
-});
-
-const blogData = [
-    {
-        title: '二篇文章',
-        date: '2023-01-01',
-        imgUrl: './images/blogs/article.png',
-        link: '/blog/1'
-
-    },
-    {
-        title: '只工作，不上班',
-        date: '2023-01-02',
-        imgUrl: './images/blogs/article1.png',
-        link: '/blog/2'
-    },
-    {
-        title: '只工作，不上班',
-        date: '2023-01-02',
-        imgUrl: './images/blogs/article2.png',
-        link: '/blog/3'
-    },
-]
+const layout = 'center';
 const watchData = [
     {
         title: '周处除三害',
@@ -38,37 +14,63 @@ const watchData = [
         imgUrl: './images/hackers_and_painters.jpg'
     },
 ]
+// page
+const page = ref(1)
+const perPage = 4
+const query = computed(() => ({
+    path: '/blog',
+    limit: perPage,
+    skip: (page.value - 1) * perPage,
+    sort: [{ date: -1 }]
+}))
+
+// total Pages
+const { data: total } = await useAsyncData('projects-count', () =>
+    queryContent('projects').count()
+)
+
+const totalPages = computed(() => Math.ceil(total.value / perPage))
+
+// newPage
+const handlePageChange = (newPage) => {
+    if (newPage >= 1 && newPage <= totalPages.value) {
+        page.value = newPage
+    }
+}
 </script>
 
 <template>
-    <section class="container mx-auto">
-        <div class="mx-5 pt-5 md:mx-20 ">
-            <h1
-                class="text-4xl font-bold text-left pt-20 mb-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit">
-                在看</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between xl:gap-12">
-                <Reel v-for="watch in watchData" :key="watch.title" :imgUrl="watch.imgUrl">
-                    <img :src="watch.imgUrl" alt="" placeholder>
-                    <template #title>{{ watch.title }}</template>
-                    <template #author>{{ watch.author }}</template>
-                    <template #year>{{ watch.year }}</template>
-                </Reel>
-            </div>
+    <NuxtLayout :name="layout">
+        <h1
+            class="text-4xl font-bold text-left pt-20 mb-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit">
+            在看</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between xl:gap-12">
+            <Reel v-for="watch in watchData" :key="watch.title" :imgUrl="watch.imgUrl" :title="watch.title" :author="watch.author" :year="watch.year">
+            </Reel>
+        </div>
 
-        </div>
-    </section>
-    <section class="container mx-auto mt-8">
-        <div class="m-5 md:mx-20 ">
-            <h1
-                class="text-4xl font-bold text-left pt-20 mb-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit">
-                文</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 justify-between gap-4 xl:gap-12">
-                <BlogCard v-for="blog in blogData" :key="blog.title" :imgUrl="blog.imgUrl" :link='blog.link'>
-                    <img :src="blog.imgUrl" alt="">
-                    <template #title>{{ blog.title }}</template>
-                    <template #date>{{ blog.date }}</template>
+        <h1
+            class="text-4xl font-bold text-left pt-20 mb-5 m-8 bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit">
+            文</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 justify-between gap-4 xl:gap-12">
+            <ContentList :query="query" path="/blog" v-slot="{ list }">
+                <BlogCard v-for="blog in list" :title="blog.title" :date="blog.date" :imgUrl="blog.image"
+                    :alt="blog.alt" :link='blog._path'>
                 </BlogCard>
-            </div>
+            </ContentList>
         </div>
-    </section>
+        <div class="text-right flex items-center justify-center mt-4 md:justify-end gap-2 md:gap-4" v-if="totalPages != 1">
+            <button @click="handlePageChange(page - 1)" :disabled="page === 1" class="disabled:opacity-50">
+                <p class="text-2xl font-thin font-mono text-zinc-300 hover:text-primary-blue/80">&lt;</p>
+            </button>
+
+            <span class="text-zinc-400 text-sm">
+                {{ page }} / {{ totalPages }}
+            </span>
+
+            <button @click="handlePageChange(page + 1)" :disabled="page === totalPages" class="disabled:opacity-50">
+                <p class="text-2xl font-thin font-mono text-zinc-300 hover:text-primary-blue/80">&gt;</p>
+            </button>
+        </div>
+    </NuxtLayout>
 </template>

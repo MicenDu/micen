@@ -28,10 +28,7 @@
                 <ToolCardStack v-for="stack in toolsData">
                     <template #category>{{ stack.category }}</template>
                     <ToolCard v-for="tool in stack.tools" :iconPath="tool.iconPath" :toolName="tool.toolName"
-                        :toolLink="tool.toolLink">
-                        <img :src="tool.iconPath" alt="">
-                        <template #toolName>{{ tool.toolName }}</template>
-                        <template #toolFunction>{{ tool.toolFunction }}</template>
+                        :toolLink="tool.toolLink" :toolFunction="tool.toolFunction">
                     </ToolCard>
                 </ToolCardStack>
             </div>

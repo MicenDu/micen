@@ -8,7 +8,8 @@
                         <h1
                             class="text-3xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit md:text-5xl">
                             Micen</h1>
-                        <p class="text-zinc-500 my-2 leading-6 text-sm md:text-2xl">用户体验设计师 / 也搞前端 / 还拍点照片</p>
+                        <p class="text-zinc-500 my-2 leading-6 text-sm md:text-2xl dark:text-zinc-300">用户体验设计师 / 也搞前端 /
+                            还拍点照片</p>
                     </div>
                     <img class="h-20 w-20 rounded-full mx-auto md:-order-1 md:w-40 md:h-40"
                         src="../public/images/ellipse.png" alt="">
@@ -18,7 +19,7 @@
         <section class="container md:px-5">
             <div class="m-5 ">
                 <SectionTitle class="font-medium">关于我</SectionTitle>
-                <p class="text-gray-500 mb-2 leading-8 text-sm w-fit">一名用户体验设计师、SDE(Someone Does
+                <p class="text-zinc-500 mb-2 leading-8 text-sm w-fit dark:text-zinc-400">一名用户体验设计师、SDE(Someone Does
                     Everything)。工业设计出身，但接触前端后，对其有着极大兴趣。于是自己设计了亿下个人网站，在此留下一些自己的想法和痕迹。</p>
             </div>
         </section>

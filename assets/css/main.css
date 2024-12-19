@@ -12,8 +12,7 @@
   }
 
   h2 {
-    @apply text-xl;
-    @apply font-medium;
+    @apply text-xl font-medium;
   }
 }
 
@@ -24,30 +23,23 @@
   .text-shadow {
     text-shadow: 0 0 12px #00000075;
   }
-
   .glass {
-    @apply bg-white/40;
-    @apply backdrop-blur-xl;
-    @apply shadow-sm;
-  }
-
-  .glass-border {
-    @apply bg-white/40;
-    @apply backdrop-blur-xl;
-    @apply border-white/20;
-    @apply border-2;
-    @apply shadow-sm;
-  }
-  .dark-mode .glass-border {
-    @apply bg-zinc-900/20;
-    @apply backdrop-blur-xl;
-    @apply border-zinc-800/20;
-    @apply border;
-    @apply shadow-sm;
+    @apply bg-white/40 backdrop-blur-xl shadow-sm;
   }
   .dark-mode .glass {
-    @apply bg-stone-800/30;
-    @apply backdrop-blur-xl;
-    @apply shadow-sm;
+    @apply bg-stone-800/30 backdrop-blur-xl shadow-sm;
+  }
+  .glass-border {
+    @apply bg-white/40 backdrop-blur-xl  border-white/20 border-2 shadow-sm;
+  }
+  .dark-mode .glass-border {
+    @apply bg-zinc-900/20 backdrop-blur-xl border-zinc-100/10 border-2 shadow-sm;
+  }
+
+  .icons {
+    @apply text-zinc-800/50;
+  }
+  .dark-mode .icons {
+    @apply text-zinc-300;
   }
 }

@@ -18,12 +18,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
-    '@nuxtjs/strapi',
-    '@nuxtjs/algolia',
     '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxt/content',
-    'unplugin-icons/nuxt',
     // ['unplugin-icons/nuxt',
     //   {
     //   autoInstall: true,
@@ -32,21 +29,13 @@ export default defineNuxtConfig({
     //   },
     //  }
     // ],
+    'unplugin-icons/nuxt',
   ],
   alias: {
     assets: '/<rootDir>/assets',
   },
   image: {
     format:['avif', 'webp'],
-  },
-  strapi: {
-    // Options
-      url: process.env.STRAPI_URL || 'http://localhost:1337',
-      prefix: '/api',
-      admin: '/admin',
-      version: 'v4',
-      cookie: {},
-      cookieName: 'strapi_jwt'
   },
   vite: {
     plugins: [

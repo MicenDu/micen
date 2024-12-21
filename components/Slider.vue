@@ -3,11 +3,13 @@
         <SectionTitle>生活</SectionTitle>
         <div class="flex gap-2">
             <button @click="prevSlide">
-                <p class="font-serif text-4xl font-thin text-zinc-300 hover:text-primary-blue" :class="prevClass">←
+                <p class="font-serif text-4xl font-thin text-zinc-300 hover:text-primary-blue dark:text-zinc-400"
+                    :class="prevClass">←
                 </p>
             </button>
             <button @click="nextSlide">
-                <p class="font-serif text-4xl font-thin text-zinc-300 hover:text-primary-blue" :class="nextClass">→
+                <p class="font-serif text-4xl font-thin text-zinc-300 hover:text-primary-blue dark:text-zinc-400"
+                    :class="nextClass">→
                 </p>
             </button>
         </div>

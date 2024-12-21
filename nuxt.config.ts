@@ -55,6 +55,10 @@ export default defineNuxtConfig({
       'public/tools',
       svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
     ),
+          'bg': FileSystemIconLoader(
+           'assets/images/bg',
+      svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
+    ),
         }
       }),
       Components({
@@ -67,6 +71,7 @@ export default defineNuxtConfig({
             customCollections: [
               'custom',
               'tools',
+              'bg',
               // custom external packages
               'plain-color-icons',
               'test-color-icons',

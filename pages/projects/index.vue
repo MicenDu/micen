@@ -31,13 +31,19 @@ const handlePageChange = (newPage) => {
             一些项目
         </h1>
 
-        <ContentList :query="query" v-slot="{ list }">
-            <ProjectCard v-for="project in list" :key="project._path" :imgUrl="project.image" :title="project.title"
-                :description="project.description" :year='project.date.slice(0, 4)' :tags="project.tags"
-                :link="project._path" />
+        <ContentList :query="query">
+            <template #default="{ list }">
+                <ProjectCard v-for="project in list" :key="project._path" :imgUrl="project.image" :title="project.title"
+                    :description="project.description" :year='project.date.slice(0, 4)' :tags="project.tags"
+                    :link="project._path" />
+            </template>
+            <template #not-found>
+                <NotFound>NO PROJECT FOUND</NotFound>
+            </template>
         </ContentList>
 
-        <div class="text-right flex items-center justify-center mt-4 md:justify-end gap-2 md:gap-4" v-if="totalPages != 1">
+        <div class="text-right flex items-center justify-center mt-4 md:justify-end gap-2 md:gap-4"
+            v-if="totalPages > 1">
             <button @click="handlePageChange(page - 1)" :disabled="page === 1" class="disabled:opacity-50">
                 <p class="text-2xl font-thin font-mono text-zinc-300 hover:text-primary-blue/80">&lt;</p>
             </button>

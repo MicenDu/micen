@@ -13,7 +13,7 @@ const query = {
             </GlassCard>
         </template>
         <template #not-found>
-            <p>No articles found.</p>
+            <NotFound>NO ARTICLES FOUND</NotFound>
         </template>
     </ContentList>
 </template>

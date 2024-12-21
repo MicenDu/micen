@@ -45,21 +45,28 @@ const handlePageChange = (newPage) => {
             class="text-4xl font-bold text-left pt-20 mb-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit">
             在看</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between xl:gap-12">
-            <Reel v-for="watch in watchData" :key="watch.title" :imgUrl="watch.imgUrl" :title="watch.title" :author="watch.author" :year="watch.year">
+            <Reel v-for="watch in watchData" :key="watch.title" :imgUrl="watch.imgUrl" :title="watch.title"
+                :author="watch.author" :year="watch.year">
             </Reel>
         </div>
 
         <h1
-            class="text-4xl font-bold text-left pt-20 mb-5 m-8 bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit">
+            class="text-4xl font-bold text-left pt-20 mb-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit">
             文</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 justify-between gap-4 xl:gap-12">
-            <ContentList :query="query" path="/blog" v-slot="{ list }">
-                <BlogCard v-for="blog in list" :title="blog.title" :date="blog.date" :imgUrl="blog.image"
-                    :alt="blog.alt" :link='blog._path'>
-                </BlogCard>
+            <ContentList :query="query">
+                <template #default="{ list }">
+                    <BlogCard v-for="blog in list" :title="blog.title" :date="blog.date" :imgUrl="blog.image"
+                        :alt="blog.alt" :link='blog._path'>
+                    </BlogCard>
+                </template>
+                <template #not-found>
+                    <NotFound>NO ARTICLES FOUND</NotFound>
+                </template>
             </ContentList>
         </div>
-        <div class="text-right flex items-center justify-center mt-4 md:justify-end gap-2 md:gap-4" v-if="totalPages != 1">
+        <div class="text-right flex items-center justify-center mt-4 md:justify-end gap-2 md:gap-4"
+            v-if="totalPages > 1">
             <button @click="handlePageChange(page - 1)" :disabled="page === 1" class="disabled:opacity-50">
                 <p class="text-2xl font-thin font-mono text-zinc-300 hover:text-primary-blue/80">&lt;</p>
             </button>

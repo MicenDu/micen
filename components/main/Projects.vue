@@ -14,7 +14,7 @@ const query = {
             </ProjectCard>
         </template>
         <template #not-found>
-            <p>No project found.</p>
+            <NotFound>NO PROJECT FOUND</NotFound>
         </template>
     </ContentList>
 </template>

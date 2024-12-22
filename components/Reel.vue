@@ -41,22 +41,22 @@ onMounted(() => {
                 isPortrait ? 'flex-col' : 'flex-row']">
                 <div>
                     <h2 class="mb-2">
-                        <slot name="title"></slot>
+                        {{ title }}
                     </h2>
                     <p class="text-sm">
-                        <slot name="author"></slot>
+                        {{ author }}
                     </p>
                 </div>
                 <time :datetime="year">
-                    <slot name="year"></slot>
+                    {{ year }}
                 </time>
             </a>
         </div>
         <div class="overflow-hidden">
-            <img :src="imgUrl" :alt="title" @load="checkImageRatio" ref="imageRef" :class="[
+            <img :src="imgUrl" :alt="title" ref="imageRef" :class="[
                 'object-cover object-center',
                 isPortrait ? 'h-64 md:h-96' : 'w-full md:h-64'
-            ]">
+            ]" />
         </div>
     </article>
 </template>

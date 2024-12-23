@@ -2,7 +2,6 @@
     <div class="grid grid-cols-1 md:max-w-7xl mx-auto gap-4 grid-flow-dense md:grid-cols-3 ">
         <section class="container mx-auto md:col-span-3 md:mb-4">
             <div class="m-5 pt-20">
-                <!-- <div class="flex justify-start gap-4 items-center xl:flex-row-reverse xl:justify-center xl:gap-14"> -->
                 <div class="grid grid-cols-2 gap-8 items-center md:grid-cols-3">
                     <div class="md:col-span-2">
                         <h1
@@ -12,7 +11,7 @@
                             还拍点照片</p>
                     </div>
                     <img class="h-20 w-20 rounded-full mx-auto md:-order-1 md:w-40 md:h-40"
-                        src="../public/images/ellipse.png" alt="">
+                        src="../assets/images/avatar.png" alt="">
                 </div>
             </div>
         </section>
@@ -28,8 +27,11 @@
                 <SectionTitle class="font-medium">擅长工具</SectionTitle>
                 <ToolCardStack v-for="stack in toolsData">
                     <template #category>{{ stack.category }}</template>
-                    <ToolCard v-for="tool in stack.tools" :iconPath="tool.iconPath" :toolName="tool.toolName"
+                    <ToolCard v-for="tool in stack.tools" :icon="tool.icon" :toolName="tool.toolName"
                         :toolLink="tool.toolLink" :toolFunction="tool.toolFunction">
+                        <template #icon>
+                            <component :is="tool.icon"></component>
+                        </template>
                     </ToolCard>
                 </ToolCardStack>
             </div>
@@ -43,11 +45,26 @@
             </div>
         </section>
     </div>
-
-
 </template>
 
 <script setup>
+import Figma from '~icons/tools/figma';
+import Photoshop from '~icons/tools/photoshop';
+import Powerpoint from '~icons/tools/powerpoint';
+import Vue from '~icons/tools/vue';
+import Nuxt from '~icons/tools/nuxt';
+import Tailwindcss from '~icons/devicon/tailwindcss'
+import JavaScript from '~icons/tools/javascript';
+import HTML from '~icons/tools/html';
+import CSS from '~icons/tools/css';
+import Davinci from '~icons/tools/davinci';
+import CapCut from '~icons/tools/capcut';
+import Lightroom from '~icons/tools/lightroom';
+import Feishu from '~icons/tools/feishu';
+import ChatGPT from '~icons/tools/chatgpt';
+import Github from '~icons/tools/github';
+import Notion from '~icons/tools/notion';
+
 const toolsData = [
     {
         category: "设计",
@@ -55,20 +72,20 @@ const toolsData = [
             {
                 toolName: "Figma",
                 toolFunction: "UI/UX设计",
-                iconPath: "/tools/figma.svg",
+                icon: Figma,
                 toolLink: 'https://www.figma.com/',
             },
             {
                 toolName: "Photoshop",
                 toolFunction: "图片处理",
-                iconPath: "/tools/photoshop.svg",
+                icon: Photoshop,
                 toolLink: 'https://www.adobe.com/products/photoshop.html',
 
             },
             {
                 toolName: "Powerpoint",
                 toolFunction: "幻灯片演示",
-                iconPath: "/tools/powerpoint.svg",
+                icon: Powerpoint,
                 toolLink: 'https://www.microsoft.com/zh-cn/microsoft-365/powerpoint'
 
             },
@@ -80,31 +97,37 @@ const toolsData = [
             {
                 toolName: "Vue",
                 toolFunction: "前端框架",
-                iconPath: "/tools/vue.svg",
+                icon: Vue,
                 toolLink: 'https://v3.cn.vuejs.org/'
             },
             {
                 toolName: "Nuxt",
                 toolFunction: "通用应用框架",
-                iconPath: "/tools/nuxt.svg",
+                icon: Nuxt,
                 toolLink: 'https://nuxt.com.cn/'
             },
             {
-                toolName: "Javascript",
+                toolName: "Tailwind",
+                toolFunction: "原子化CSS框架",
+                icon: Tailwindcss,
+                toolLink: 'https://tailwindcss.com/'
+            },
+            {
+                toolName: "JavaScript",
                 toolFunction: "编程语言",
-                iconPath: "/tools/javascript.svg",
+                icon: JavaScript,
                 toolLink: 'https://zh.javascript.info/'
             },
             {
                 toolName: "HTML",
                 toolFunction: "超文本标记语言",
-                iconPath: "/tools/html.svg",
+                icon: HTML,
                 toolLink: 'https://developer.mozilla.org/zh-CN/docs/Web/HTML'
             },
             {
                 toolName: "CSS",
                 toolFunction: "层叠样式表",
-                iconPath: "/tools/css.svg",
+                icon: CSS,
                 toolLink: 'https://developer.mozilla.org/zh-CN/docs/Web/CSS'
 
             },
@@ -117,20 +140,20 @@ const toolsData = [
             {
                 toolName: "DaVinci Resolve",
                 toolFunction: "视频调色",
-                iconPath: "/tools/davinci.svg",
+                icon: Davinci,
                 toolLink: 'https://www.blackmagicdesign.com/products/davinciresolve/'
             },
             {
                 toolName: "CapCut",
                 toolFunction: "视频剪辑",
-                iconPath: "/tools/capcut.svg",
+                icon: CapCut,
                 toolLink: 'https://www.capcut.com/'
 
             },
             {
                 toolName: "Lightroom",
                 toolFunction: "图像后期",
-                iconPath: "/tools/lightroom.svg",
+                icon: Lightroom,
                 toolLink: 'https://www.adobe.com/products/photoshop-lightroom.html'
             },
 
@@ -142,25 +165,25 @@ const toolsData = [
             {
                 toolName: "飞书",
                 toolFunction: "高效办公",
-                iconPath: "/tools/feishu.svg",
+                icon: Feishu,
                 toolLink: 'https://www.feishu.cn/'
             },
             {
                 toolName: "ChatGPT",
                 toolFunction: "AI 对话",
-                iconPath: "/tools/chatgpt.svg",
+                icon: ChatGPT,
                 toolLink: 'https://chatgpt.com/'
             },
             {
                 toolName: "Github",
                 toolFunction: "代码托管",
-                iconPath: "/tools/github.svg",
+                icon: Github,
                 toolLink: 'https://github.com/'
             },
             {
                 toolName: "Notion",
                 toolFunction: "笔记管理",
-                iconPath: "/tools/notion.svg",
+                icon: Notion,
                 toolLink: 'https://www.notion.so/'
             }
         ]

@@ -36,6 +36,7 @@ export default defineNuxtConfig({
   },
   image: {
     format:['avif', 'webp'],
+    domains: ['www.micen.com', 'micen.com'],
   },
   vite: {
     plugins: [
@@ -52,7 +53,7 @@ export default defineNuxtConfig({
       svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
     ),
           'tools': FileSystemIconLoader(
-      'public/tools',
+      'assets/images/tools',
       svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
     ),
           'bg': FileSystemIconLoader(

@@ -1,7 +1,7 @@
 <template>
     <main>
         <section class="container mx-auto">
-            <div class="mx-5 pt-20 md:mx-20 ">
+            <div class="mx-5 py-20 md:mx-20 ">
                 <ContentDoc v-slot="{ doc }">
                     <article>
                         <ArticleHeader :title="doc.title" :date="doc.date" :tags="doc.tags" :image="doc.image">
@@ -21,23 +21,23 @@
 
 <style>
 .content h1 {
-    @apply text-primary-blue text-2xl font-medium mb-2 mt-6;
+    @apply text-zinc-600 text-2xl font-medium mb-2 mt-6;
 }
 
 .content h2 {
-    @apply text-primary-blue text-xl font-medium mb-2 mt-6;
+    @apply text-zinc-600 text-xl font-medium mb-2 mt-6;
 }
 
 .content h3 {
-    @apply text-primary-blue text-lg font-medium mb-2 mt-6;
+    @apply text-zinc-600 text-lg font-medium mb-2 mt-6;
 }
 
 .content h4 {
-    @apply text-primary-blue text-base font-medium mb-2 mt-6;
+    @apply text-zinc-600 text-base font-medium mb-2 mt-6;
 }
 
 .content p {
-    @apply text-base text-zinc-500 leading-relaxed;
+    @apply text-base text-zinc-500 leading-7;
 }
 
 .content ul li {
@@ -53,6 +53,9 @@
 }
 
 .content img {
-    @apply w-full h-auto my-3;
+    @apply w-full h-auto my-6;
+}
+blockquote{
+    @apply border-l-2 border-zinc-300 pl-4 my-4 ;
 }
 </style>

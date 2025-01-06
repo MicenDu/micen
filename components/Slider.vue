@@ -18,10 +18,12 @@
 
         <div class="flex gap-8 transition-transform duration-300 "
             :style="{ transform: `translateX(${cardWidth * (-curSlide)}px)` }">
-            <QuoteCard v-for="(quote, index) in quotes" class="transition-transform duration-300" id="quote-card">
-                <template #quote>{{ quote.quote }}</template>
-                <template #cite>{{ quote.cite }}</template>
-                <template #year>{{ quote.year }}</template>
+            <QuoteCard v-for="quote in quotes"
+            :cite="quote.cite"
+            :quote="quote.quote"
+            :year="quote.year"
+            class="transition-transform duration-300" id="quote-card">
+               
             </QuoteCard>
         </div>
 
@@ -32,9 +34,8 @@
 import { ref } from 'vue'
 import QuoteCard from './QuoteCard.vue';
 const quotes = [
-    { quote: '这是正经班吗？', cite: '漫长的季节', year: 2023 },
-    { quote: '这是正班吗？', cite: '漫长的季', year: 2024 },
-    { quote: '这是班吗？', cite: '漫长的', year: 2025 },
+    { quote: '感觉像吃了仙人掌一样难受', cite: '美丽新世界', year: 1932 },
+    { quote: '都怪这吉他，弹得太凄凉', cite: '驴得水', year: 2016 },
 ];
 
 let curSlide = ref(0);

@@ -35,7 +35,9 @@ import { ref } from 'vue'
 import QuoteCard from './QuoteCard.vue';
 const quotes = [
     { quote: '感觉像吃了仙人掌一样难受', cite: '美丽新世界', year: 1932 },
+    { quote:'帕金森定律被证明与摩尔定律一样颠扑不破', cite:'黑客与画家', year: 2011},
     { quote: '都怪这吉他，弹得太凄凉', cite: '驴得水', year: 2016 },
+    
 ];
 
 let curSlide = ref(0);

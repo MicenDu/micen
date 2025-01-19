@@ -6,7 +6,7 @@ const query = {
 }
 </script>
 <template>
-    <ContentList :query="query" path="/blog">
+    <ContentList :query="query">
         <template #default="{ list }">
             <GlassCard v-for="(blog, index) in list" :key="blog._path" :title="blog.title"
                 :description="blog.description" :date="blog.date" :index="index" :link="blog._path">

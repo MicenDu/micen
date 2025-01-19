@@ -7,7 +7,7 @@ const query = {
 </script>
 
 <template>
-    <ContentList :query="query" path="/projects">
+    <ContentList :query="query">
         <template #default="{ list }">
             <ProjectCard v-for="project in list" :key="project._path" :imgUrl="project.image" :title="project.title"
                 :description="project.description" :year='project.date' :tags="project.tags" :link="project._path">

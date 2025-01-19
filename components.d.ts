@@ -7,12 +7,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    IBackgroundGradient: typeof import('~icons/background/gradient')['default']
     IBgGradient: typeof import('~icons/bg/gradient')['default']
     ICustomMail: typeof import('~icons/custom/mail')['default']
     ICustomMenu: typeof import('~icons/custom/menu')['default']
-    IToolsDavinci: typeof import('~icons/tools/davinci')['default']
+    IIconPath: typeof import('~icons/ic/on-path')['default']
+    IToolsFigma: typeof import('~icons/tools/figma')['default']
     IToolsPhotoshop: typeof import('~icons/tools/photoshop')['default']
+    IToolsVue: typeof import('~icons/tools/vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

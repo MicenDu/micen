@@ -1,6 +1,6 @@
 <template>
     <main>
-        <section class="container mx-auto mt-14">
+        <section class="container mx-auto pt-14 min-h-[85vh]">
             <div class="mx-5 pt-5 md:mx-20 ">
                 <ContentDoc v-slot="{ doc }">
                     <article>

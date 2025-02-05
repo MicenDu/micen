@@ -18,8 +18,7 @@
         <section class="container md:px-5">
             <div class="m-5 ">
                 <SectionTitle class="font-medium">关于我</SectionTitle>
-                <p class="text-zinc-500 mb-2 leading-8 text-sm w-fit dark:text-zinc-400">一名用户体验设计师、SDE(Someone Does
-                    Everything)。工业设计出身，但接触前端后，对其有着极大兴趣。于是自己设计了亿下个人网站，在此留下一些自己的想法和痕迹。</p>
+                <p class="text-zinc-500 mb-2 leading-8 text-sm w-fit dark:text-zinc-400">嗨👋，我是 Micen，一位热衷于前端开发和用户体验的设计工程师。我擅长运用 Vue、JavaScript 等技术打造高效、易用的网站，并注重用户研究和数据分析，以提升产品的影响力和品牌价值。</p>
             </div>
         </section>
         <section class="container md:col-span-2 md:row-span-3">

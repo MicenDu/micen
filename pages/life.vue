@@ -2,16 +2,16 @@
 const layout = 'center';
 const watchData = [
     {
-        title: '周处除三害',
-        author: '黄精甫',
-        year: '2023',
-        imgUrl: './images/the_pig_the_snake_and_the_pigeon.jpg'
+        title: '美丽新世界',
+        author: '阿道司·赫胥黎',
+        year: '1932',
+        imgUrl: './images/reels/Brave_New_World.jpg'
     },
     {
-        title: '黑客与画家',
-        author: '保罗·格雷厄姆',
-        year: '2022',
-        imgUrl: './images/hackers_and_painters.jpg'
+        title: '被解救的姜戈',
+        author: '昆汀·塔伦蒂诺',
+        year: '2012',
+        imgUrl: 'images/reels/Django_Unchained.jpg'
     },
 ]
 // page

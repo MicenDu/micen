@@ -47,24 +47,6 @@
 </template>
 
 <script setup>
-<<<<<<< HEAD
-import Figma from '~icons/tools/figma';
-import Photoshop from '~icons/tools/photoshop';
-import PowerPoint from '~icons/tools/powerpoint';
-import Vue from '~icons/tools/vue';
-import Nuxt from '~icons/tools/nuxt';
-import Tailwindcss from '~icons/devicon/tailwindcss'
-import JavaScript from '~icons/tools/javascript';
-import HTML from '~icons/tools/html';
-import CSS from '~icons/tools/css';
-import Davinci from '~icons/tools/davinci';
-import CapCut from '~icons/tools/capcut';
-import Lightroom from '~icons/tools/lightroom';
-import Feishu from '~icons/tools/feishu';
-import ChatGPT from '~icons/tools/chatgpt';
-import Github from '~icons/tools/github';
-import Notion from '~icons/tools/notion';
-=======
 import Figma from '~icons/tools/Figma';
 import Photoshop from '~icons/tools/Photoshop';
 import PowerPoint from '~icons/tools/PowerPoint';
@@ -81,7 +63,6 @@ import Feishu from '~icons/tools/Feishu';
 import ChatGPT from '~icons/tools/ChatGPT';
 import Github from '~icons/tools/Github';
 import Notion from '~icons/tools/Notion';
->>>>>>> new-feature
 
 const toolsData = [
     {

@@ -47,22 +47,22 @@
 </template>
 
 <script setup>
-import Figma from '~icons/tools/figma';
-import Photoshop from '~icons/tools/photoshop';
-import Powerpoint from '~icons/tools/powerpoint';
-import Vue from '~icons/tools/vue';
-import Nuxt from '~icons/tools/nuxt';
-import Tailwindcss from '~icons/devicon/tailwindcss'
-import JavaScript from '~icons/tools/javascript';
-import HTML from '~icons/tools/html';
-import CSS from '~icons/tools/css';
-import Davinci from '~icons/tools/davinci';
-import CapCut from '~icons/tools/capcut';
-import Lightroom from '~icons/tools/lightroom';
-import Feishu from '~icons/tools/feishu';
-import ChatGPT from '~icons/tools/chatgpt';
-import Github from '~icons/tools/github';
-import Notion from '~icons/tools/notion';
+import Figma from '~icons/tools/Figma';
+import Photoshop from '~icons/tools/Photoshop';
+import PowerPoint from '~icons/tools/PowerPoint';
+import Vue from '~icons/tools/Vue';
+import Nuxt from '~icons/tools/Nuxt';
+import Tailwindcss from '~icons/devicon/Tailwindcss'
+import JavaScript from '~icons/tools/JavaScript';
+import HTML from '~icons/tools/Html';
+import CSS from '~icons/tools/CSS';
+import Davinci from '~icons/tools/Davinci';
+import CapCut from '~icons/tools/CapCut';
+import Lightroom from '~icons/tools/Lightroom';
+import Feishu from '~icons/tools/Feishu';
+import ChatGPT from '~icons/tools/ChatGPT';
+import Github from '~icons/tools/Github';
+import Notion from '~icons/tools/Notion';
 
 const toolsData = [
     {
@@ -82,9 +82,9 @@ const toolsData = [
 
             },
             {
-                toolName: "Powerpoint",
+                toolName: "PowerPoint",
                 toolFunction: "幻灯片演示",
-                icon: Powerpoint,
+                icon: PowerPoint,
                 toolLink: 'https://www.microsoft.com/zh-cn/microsoft-365/powerpoint'
 
             },

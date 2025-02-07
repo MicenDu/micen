@@ -54,14 +54,14 @@ import Vue from '~icons/tools/Vue';
 import Nuxt from '~icons/tools/Nuxt';
 import Tailwindcss from '~icons/devicon/Tailwindcss'
 import JavaScript from '~icons/tools/JavaScript';
-import HTML from '~icons/tools/Html';
+import HTML from '~icons/tools/HTML';
 import CSS from '~icons/tools/CSS';
-import Davinci from '~icons/tools/Davinci';
+import Davinci from '~icons/tools/DaVinci';
 import CapCut from '~icons/tools/CapCut';
 import Lightroom from '~icons/tools/Lightroom';
 import Feishu from '~icons/tools/Feishu';
 import ChatGPT from '~icons/tools/ChatGPT';
-import Github from '~icons/tools/Github';
+import Github from '~icons/tools/GitHub';
 import Notion from '~icons/tools/Notion';
 
 const toolsData = [

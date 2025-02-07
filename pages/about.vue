@@ -49,7 +49,7 @@
 <script setup>
 import Figma from '~icons/tools/figma';
 import Photoshop from '~icons/tools/photoshop';
-import Powerpoint from '~icons/tools/powerpoint';
+import PowerPoint from '~icons/tools/powerpoint';
 import Vue from '~icons/tools/vue';
 import Nuxt from '~icons/tools/nuxt';
 import Tailwindcss from '~icons/devicon/tailwindcss'
@@ -82,9 +82,9 @@ const toolsData = [
 
             },
             {
-                toolName: "Powerpoint",
+                toolName: "PowerPoint",
                 toolFunction: "幻灯片演示",
-                icon: Powerpoint,
+                icon: PowerPoint,
                 toolLink: 'https://www.microsoft.com/zh-cn/microsoft-365/powerpoint'
 
             },

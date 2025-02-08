@@ -51,4 +51,8 @@
 .content img {
     @apply w-full h-auto my-3;
 }
+
+.content ul{
+    @apply list-inside
+}
 </style>

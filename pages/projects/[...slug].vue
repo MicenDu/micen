@@ -51,13 +51,20 @@
 .content img {
     @apply w-full h-auto my-6;
 }
+
 blockquote{
     @apply border-l-2 border-zinc-300 pl-4 my-4 ;
 }
+
 .content p a{
     @apply underline underline-offset-4 decoration-1 decoration-zinc-400/50 transition ease-in-out;
 }
+
 .content p a:hover{
     @apply decoration-primary-blue/80 decoration-2;
+}
+
+.content ul{
+    @apply list-inside
 }
 </style>

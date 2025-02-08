@@ -32,12 +32,8 @@
     @apply text-zinc-600 text-lg font-medium mb-2 mt-6;
 }
 
-.content h4 {
-    @apply text-zinc-600 text-base font-medium mb-2 mt-6;
-}
-
 .content p {
-    @apply text-base text-zinc-500 leading-7;
+    @apply text-lg text-zinc-500 leading-7;
 }
 
 .content ul li {
@@ -57,5 +53,11 @@
 }
 blockquote{
     @apply border-l-2 border-zinc-300 pl-4 my-4 ;
+}
+.content p a{
+    @apply underline underline-offset-4 decoration-1 decoration-zinc-400/50 transition ease-in-out;
+}
+.content p a:hover{
+    @apply decoration-primary-blue/80 decoration-2;
 }
 </style>

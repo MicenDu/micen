@@ -32,12 +32,8 @@
     @apply text-primary-blue text-lg font-medium mb-2 mt-6;
 }
 
-.content h4 {
-    @apply text-primary-blue text-base font-medium mb-2 mt-6;
-}
-
 .content p {
-    @apply text-base text-zinc-500 leading-relaxed;
+    @apply text-lg text-zinc-500 leading-relaxed;
 }
 
 .content ul li {

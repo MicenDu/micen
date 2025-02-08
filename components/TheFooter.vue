@@ -21,16 +21,16 @@ const navigation = [
                 </div>
             </div>
             <div class="gap-4 grid grid-cols-2 md:grid-cols-4 ">
-                <a href="">
+                <a href="https://github.com/Micenjia">
                     <icon-github class="icons" />
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/qujiadu/">
                     <ph-linkedin-logo-bold class="icons" />
                 </a>
-                <a href="" class="icons">
+                <a href="https://www.instagram.com/micenjia/" class="icons">
                     <mdi-instagram />
                 </a>
-                <a href="" class="icons">
+                <a href="mailto:duqujia@hotmail.com" class="icons">
                     <i-custom-mail />
                 </a>
             </div>

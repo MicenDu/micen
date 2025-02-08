@@ -50,7 +50,7 @@ const navigation = [
                         <line-md-moon-to-sunny-outline-loop-transition class="icons" />
 
                     </button>
-                    <a href="">
+                    <a href="https://github.com/Micenjia">
                         <icon-github class="icons" />
                     </a>
                 </div>
@@ -64,7 +64,8 @@ const navigation = [
                     </a>
                     <ul class="flex gap-4 items-start pt-2">
                         <li v-show="!showMenu">
-                            <button @click="$colorMode.preference = 'dark'" v-show="$colorMode.preference == 'light'">
+                            <button @click="$colorMode.preference = 'dark'"
+                                v-show="$colorMode.preference == 'light' || $colorMode.preference == 'system'">
                                 <!-- <img src="../assets/icons/Search.svg" alt=""> -->
                                 <line-md-moon-rising-twotone-alt-loop class="icons " />
                             </button>

@@ -37,11 +37,11 @@
 }
 
 .content ul li {
-    @apply list-disc text-zinc-500 mb-1;
+    @apply list-disc text-zinc-500 mb-1 text-lg;
 }
 
 .content ol li {
-    @apply list-decimal list-inside text-zinc-500 mb-1;
+    @apply list-decimal list-inside text-zinc-500 mb-1 text-lg;
 }
 
 .content strong {

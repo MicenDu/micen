@@ -7,9 +7,6 @@
                         <ArticleHeader :title="doc.title" :date="doc.date" :tags="doc.tags" :image="doc.image">
                         </ArticleHeader>
                         <div class="grid grid-cols-1 md:grid-cols-10 gap-6 mt-6">
-                            <!-- <ClientCard :company="doc.company" :types="doc.types" :tools="doc.tools"
-                                class="md:col-span-2 w-fit h-fit md:sticky md:top-20">
-                            </ClientCard> -->
                             <ContentRenderer :value="doc" class="content px-2 md:col-span-6 md:col-start-3" />
                         </div>
                     </article>
@@ -37,11 +34,11 @@
 }
 
 .content ul li {
-    @apply list-disc text-zinc-500 mb-1;
+    @apply list-disc text-zinc-500 mb-1 text-lg;
 }
 
 .content ol li {
-    @apply list-decimal list-inside text-zinc-500 mb-1;
+    @apply list-decimal list-inside text-zinc-500 mb-1 text-lg;
 }
 
 .content strong {

@@ -7,8 +7,7 @@
                         <h1
                             class="text-3xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit md:text-5xl">
                             Micen</h1>
-                        <p class="text-zinc-500 my-2 leading-6 text-sm md:text-2xl dark:text-zinc-300">用户体验设计师 / 也搞前端 /
-                            还拍点照片</p>
+                        <p class="text-zinc-500 my-2 leading-6 text-sm md:text-2xl dark:text-zinc-300">设计工程师 / 用户体验设计师 / 还拍点照片</p>
                     </div>
                     <img class="h-20 w-20 rounded-full mx-auto md:-order-1 md:w-40 md:h-40"
                         src="../assets/images/avatar.png" alt="">

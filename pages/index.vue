@@ -1,5 +1,11 @@
 <script setup>
 const layout = "center";
+useSeoMeta({
+  title: 'Micen',
+  ogTitle: 'Micen',
+  description: '这是 Micen, 一名设计工程师的个人网站',
+  ogDescription: '这是 Micen, 一名设计工程师的个人网站',
+})
 </script>
 
 <template>

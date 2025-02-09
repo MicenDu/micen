@@ -63,6 +63,13 @@ import ChatGPT from '~icons/tools/ChatGPT';
 import Github from '~icons/tools/GitHub';
 import Notion from '~icons/tools/Notion';
 
+useSeoMeta({
+  title: '关于',
+  ogTitle: '关于',
+  description: '探索技术与设计的平衡点，用代码实现用户体验价值',
+  ogDescription: '探索技术与设计的平衡点，用代码实现用户体验价值'
+})
+
 const toolsData = [
     {
         category: "设计",

@@ -1,4 +1,11 @@
 <script setup>
+useSeoMeta({
+  title: '项目展示',
+  ogTitle: 'Micen 的项目作品集',
+  description: '从技术实现到用户体验优化的完整项目实践',
+  ogDescription: '从技术实现到用户体验优化的完整项目实践'
+})
+
 const layout = "center";
 // page
 const page = ref(1)

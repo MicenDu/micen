@@ -1,4 +1,10 @@
 <script setup>
+useSeoMeta({
+  title: '生活札记',
+  ogTitle: '生活札记',
+  description: '记录日常生活中的一些心得体会',
+  ogDescription: '记录日常生活中的一些心得体会'
+})
 const layout = 'center';
 const watchData = [
     {

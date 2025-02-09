@@ -1,75 +1,44 @@
-# Nuxt 3 Minimal Starter
+# Micen 的个人网站
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[![website design](/public/images/blogs/website_design.png)](https://qujia.netlify.app)
 
-## Setup
+## 技术栈
 
-Make sure to install the dependencies:
+- Nuxt：网站框架
+- Nuxt content：Markdown CMS
+- Nuxt image：图像优化，可以转化为 AVIF 格式优化性能
+- Nuxt color mode：暗色模式
+- Tailwind CSS：原子化 CSS
+- unplugin-icons：图标渲染
 
-```bash
-# npm
-npm install
+## 部署
 
-# pnpm
+克隆仓库
+
+```
+git clone https://github.com/Micenjia/micen.git
+```
+
+进入项目目录
+
+```
+cd micen
+```
+
+安装依赖
+
+```
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+启动开发服务器
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
+```
 pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+构建生产环境
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
+```
 pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

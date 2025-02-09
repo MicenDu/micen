@@ -21,15 +21,15 @@
 
 <style>
 .content h1 {
-    @apply text-zinc-600 text-2xl font-medium mb-2 mt-6;
+    @apply text-primary-blue text-2xl font-medium mb-2 mt-6;
 }
 
 .content h2 {
-    @apply text-zinc-600 text-xl font-medium mb-2 mt-6;
+    @apply text-primary-blue text-xl font-medium mb-2 mt-6;
 }
 
 .content h3 {
-    @apply text-zinc-600 text-lg font-medium mb-2 mt-6;
+    @apply text-primary-blue text-lg font-medium mb-2 mt-6;
 }
 
 .content p {

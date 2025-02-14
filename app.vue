@@ -17,11 +17,5 @@ useHead({
       ? `${productCategory} | Micen`
       : 'Micen'
   },
-  script: [
-    {
-      src: 'https://cloud.umami.is/script.js" data-website-id="cbc68f0d-3f25-426d-a3ed-d506c6c51ea3',
-      tagPosition: 'head'
-    }
-  ]
 })
 </script>

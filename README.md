@@ -6,7 +6,7 @@
 
 - Nuxt：网站框架
 - Nuxt content：Markdown CMS
-- Nuxt image：图像优化，可以转化为 AVIF 格式优化性能
+- Nuxt image：图像优化
 - Nuxt color mode：暗色模式
 - Tailwind CSS：原子化 CSS
 - unplugin-icons：图标渲染

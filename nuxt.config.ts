@@ -31,7 +31,11 @@ export default defineNuxtConfig({
     // ],
     'unplugin-icons/nuxt',
     'nuxt-umami',
+    'nuxt-gtag',
   ],
+  gtag: {
+    id: 'GTM-TTJX3HQP'
+  },
   umami:{
     id: 'cbc68f0d-3f25-426d-a3ed-d506c6c51ea3',
     host: 'https://cloud.umami.is',

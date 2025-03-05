@@ -17,5 +17,8 @@ useHead({
       ? `${productCategory} | Micen`
       : 'Micen'
   },
+  htmlAttrs: {
+    lang: 'zh-CN',
+  }
 })
 </script>

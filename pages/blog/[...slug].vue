@@ -33,6 +33,10 @@
     @apply text-lg text-zinc-500 leading-relaxed;
 }
 
+.dark-mode .content p {
+    @apply text-zinc-400;
+}
+
 .content ul li {
     @apply list-disc text-zinc-500 mb-1 text-lg;
 }

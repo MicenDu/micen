@@ -4,12 +4,12 @@
 
 ## 技术栈
 
-- Nuxt：网站框架
-- Nuxt content：Markdown CMS
-- Nuxt image：图像优化
-- Nuxt color mode：暗色模式
-- Tailwind CSS：原子化 CSS
-- unplugin-icons：图标渲染
+- [Nuxt](https://nuxt.com/)：网站框架
+- [Nuxt content](https://content.nuxt.com/)：Markdown CMS
+- [Nuxt image](https://image.nuxt.com/)：图像优化
+- [Nuxt color mode](https://color-mode.nuxtjs.org/)：暗色模式
+- [Tailwind CSS](https://tailwindcss.com/)：原子化 CSS
+- [unplugin-icons](https://github.com/unplugin/unplugin-icons)：图标渲染
 
 ## 部署
 

@@ -46,6 +46,7 @@ export default defineNuxtConfig({
   },
   image: {
     format:['avif', 'webp'],
+    provider: 'netlify',
   },
   vite: {
     plugins: [

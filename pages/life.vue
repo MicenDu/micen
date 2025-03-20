@@ -11,7 +11,7 @@ const watchData = [
         title: '美丽新世界',
         author: '阿道司·赫胥黎',
         year: '1932',
-        imgUrl: './images/reels/Brave_New_World.jpg'
+        imgUrl: 'images/reels/Brave_New_World.jpg'
     },
     {
         title: '被解救的姜戈',

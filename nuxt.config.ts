@@ -46,7 +46,6 @@ export default defineNuxtConfig({
   },
   image: {
     format:['avif', 'webp'],
-    domains: ['www.micen.com', 'micen.com'],
   },
   vite: {
     plugins: [

@@ -66,7 +66,7 @@ onMounted(async () => {
             </a>
         </div>
         <div class="overflow-hidden">
-            <img 
+            <NuxtImg 
                 :src="imgUrl" 
                 :alt="title" 
                 ref="imageRef"

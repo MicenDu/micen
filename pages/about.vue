@@ -9,8 +9,8 @@
                             Micen</h1>
                         <p class="text-zinc-500 my-2 leading-6 text-sm md:text-2xl dark:text-zinc-300">设计工程师 / 用户体验设计师 / 还拍点照片</p>
                     </div>
-                    <img class="h-20 w-20 rounded-full mx-auto md:-order-1 md:w-40 md:h-40"
-                        src="../assets/images/avatar.png" alt="">
+                    <NuxtImg class="h-20 w-20 rounded-full mx-auto md:-order-1 md:w-40 md:h-40"
+                        src="/images/avatar.png" alt="avatar" loading="lazy" format="avif"/>
                 </div>
             </div>
         </section>

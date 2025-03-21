@@ -1,7 +1,7 @@
 ---
 title: 2024 年的年度总结
 description: 回顾这一年，是充满着各种刺激，也是如此的精彩。
-image: ./public/images/blogs/2024_snow.jpg
+image: /images/blogs/2024_snow.jpg
 alt: 2024_summary
 date: 2025-02-5
 ---

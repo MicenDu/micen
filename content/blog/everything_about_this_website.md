@@ -1,7 +1,7 @@
 ---
 title: 关于这个网站的一切
 description: 很久没有写过什么东西了，也不知如何下笔，于是有了这个地方
-image: ./images/blogs/website_cover.png
+image: /images/blogs/website_cover.png
 alt: website cover
 date: 2024-12-5
 ---

@@ -55,8 +55,9 @@ defineProps({
           </div>
         </div>
         <div class="max-h-96 overflow-hidden shrink-0 lg:col-span-6 relative ">
-          <NuxtPicture :src="imgUrl" alt="" class="w-full h-full object-cover object-center" loading="lazy" placeholder
-            format="avif,webp" />
+          <NuxtPicture :src="imgUrl" alt=""
+            :imgAttrs="{ style: 'object-fit:cover; object-position:center; width:100%; height:100%;' }" loading="lazy"
+            placeholder format="avif" />
         </div>
         <div class="p-4 glass-border col-auto lg:hidden">
           <div class="text-sm mb-4">

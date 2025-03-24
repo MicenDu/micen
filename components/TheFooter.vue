@@ -13,7 +13,7 @@ const navigation = [
 
 <template>
     <footer class="glass flex bottom-0 w-full mt-20 justify-center">
-        <div class="flex flex-row justify-between container relative py-6 mx-16 ">
+        <div class="flex flex-row justify-between container relative py-6 mx-8 md:mx-16 ">
             <div class="flex text-sm text-gray-500 flex-col gap-4 md:flex-row md:gap-8 dark:text-zinc-300">
                 <span class="font-medium">Micen © 2025</span>
                 <div class="flex gap-6 ">
@@ -28,10 +28,10 @@ const navigation = [
                     <ph-linkedin-logo-bold class="icons" />
                 </a>
                 <a href="https://www.instagram.com/micenjia/">
-                    <mdi-instagram  class="icons"/>
+                    <mdi-instagram class="icons" />
                 </a>
-                <a href="mailto:duqujia@hotmail.com" >
-                    <i-custom-mail class="icons"/>
+                <a href="mailto:duqujia@hotmail.com">
+                    <i-custom-mail class="icons" />
                 </a>
             </div>
         </div>

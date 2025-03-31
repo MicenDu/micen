@@ -7,17 +7,19 @@
                         <h1
                             class="text-3xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-light-green w-fit md:text-5xl">
                             Micen</h1>
-                        <p class="text-zinc-500 my-2 leading-6 text-sm md:text-2xl dark:text-zinc-300">设计工程师 / 用户体验设计师 / 还拍点照片</p>
+                        <p class="text-zinc-500 my-2 leading-6 text-sm md:text-2xl dark:text-zinc-300">设计工程师 / 用户体验设计师 /
+                            还拍点照片</p>
                     </div>
-                    <NuxtImg class="h-20 w-20 rounded-full mx-auto md:-order-1 md:w-40 md:h-40"
-                        src="/images/avatar.png" alt="avatar" loading="lazy" format="avif"/>
+                    <NuxtImg class="h-20 w-20 rounded-full mx-auto md:-order-1 md:w-40 md:h-40" src="/images/avatar.png"
+                        alt="avatar" loading="lazy" format="avif" />
                 </div>
             </div>
         </section>
         <section class="container md:px-5">
             <div class="m-5 ">
                 <SectionTitle class="font-medium">关于我</SectionTitle>
-                <p class="text-zinc-500 mb-2 leading-8 text-sm w-fit dark:text-zinc-400">嗨👋，我是 Micen，一位热衷于前端开发和用户体验的设计工程师。我擅长运用 Vue、JavaScript 等技术打造高效、易用的网站，并注重用户研究和数据分析，以提升产品的影响力和品牌价值。</p>
+                <p class="text-zinc-500 mb-2 leading-8 text-sm w-fit dark:text-zinc-400">嗨👋，我是
+                    Micen，一位热衷于前端开发和用户体验的设计工程师。我擅长运用 Vue、JavaScript 等技术打造高效、易用的网站，并注重用户研究和数据分析，以提升产品的影响力和品牌价值。</p>
             </div>
         </section>
         <section class="container md:col-span-2 md:row-span-3">
@@ -62,12 +64,13 @@ import Feishu from '~icons/tools/Feishu';
 import ChatGPT from '~icons/tools/ChatGPT';
 import Github from '~icons/tools/GitHub';
 import Notion from '~icons/tools/Notion';
+import Slidev from '~icons/tools/Slidev';
 
 useSeoMeta({
-  title: '关于',
-  ogTitle: '关于',
-  description: '探索技术与设计的平衡点，用代码实现用户体验价值',
-  ogDescription: '探索技术与设计的平衡点，用代码实现用户体验价值'
+    title: '关于',
+    ogTitle: '关于',
+    description: '探索技术与设计的平衡点，用代码实现用户体验价值',
+    ogDescription: '探索技术与设计的平衡点，用代码实现用户体验价值'
 })
 
 const toolsData = [
@@ -190,6 +193,12 @@ const toolsData = [
                 toolFunction: "笔记管理",
                 icon: Notion,
                 toolLink: 'https://www.notion.so/'
+            },
+            {
+                toolName: "Slidev",
+                toolFunction: "演示文稿",
+                icon: Slidev,
+                toolLink: 'https://sli.dev'
             }
         ]
     }

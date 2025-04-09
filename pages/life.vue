@@ -1,17 +1,17 @@
 <script setup>
 useSeoMeta({
-  title: '生活札记',
-  ogTitle: '生活札记',
-  description: '记录日常生活中的一些心得体会',
-  ogDescription: '记录日常生活中的一些心得体会'
+    title: '生活札记',
+    ogTitle: '生活札记',
+    description: '记录日常生活中的一些心得体会',
+    ogDescription: '记录日常生活中的一些心得体会'
 })
 const layout = 'center';
 const watchData = [
     {
-        title: '美丽新世界',
-        author: '阿道司·赫胥黎',
-        year: '1932',
-        imgUrl: 'images/reels/Brave_New_World.jpg'
+        title: '分成两半的子爵',
+        author: '伊塔洛·卡尔维诺',
+        year: '1952',
+        imgUrl: 'images/reels/the_cloven_viscount.jpg'
     },
     {
         title: '被解救的姜戈',

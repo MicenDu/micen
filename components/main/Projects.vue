@@ -1,7 +1,7 @@
 <script setup>
 const query = {
     path: '/projects',
-    limit: 2,
+    limit: 3,
     sort: { date: -1 },
 }
 </script>

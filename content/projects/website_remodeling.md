@@ -60,6 +60,11 @@ tools: ['标杆研究', '低保真分析', 'Bootstrap', 'Midjourney', 'Google An
 
 ![SEO.jpg](/images/projects/SEO.jpg)
 
+# 后续迭代
+
+采用飞书多维表格进行项目管理，收集网站需求并进行整理归类，可以有效的跟踪每个任务的进度以及协调团队成员工作
+![Lark](/images/projects/feishu.png)
+
 # 总结
 
 通过这次项目，我们不仅提升了德诚控股集团的企业形象，还提高了用户体验，使网站更加具有品牌力、冲击力和感染力。

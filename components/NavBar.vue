@@ -59,7 +59,7 @@ onMounted(() => {
                         <line-md-moon-to-sunny-outline-loop-transition class="icons" />
 
                     </button>
-                    <a href="https://github.com/Micenjia">
+                    <a href="https://github.com/MicenDu" target="_blank">
                         <icon-github class="icons" />
                     </a>
                 </div>

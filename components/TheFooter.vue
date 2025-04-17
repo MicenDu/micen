@@ -22,7 +22,7 @@ const year = new Date().getFullYear();
                 </div>
             </div>
             <div class="gap-4 grid grid-cols-2 md:grid-cols-4 ">
-                <a href="https://github.com/Micenjia">
+                <a href="https://github.com/MicenDu">
                     <icon-github class="icons" />
                 </a>
                 <a href="https://www.linkedin.com/in/qujiadu/">

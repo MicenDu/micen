@@ -6,13 +6,22 @@ import IconGithub from '~icons/mdi/github';
 const showMenu = ref(false);
 const light = ref(false);
 const colorMode = useColorMode()
-console.log(colorMode.preference)
 const navigation = [
     { name: '首页', href: '/' },
     { name: '项目', href: '/projects' },
     { name: '生活', href: '/life' },
     { name: '关于', href: '/about' },
 ]
+onMounted(() => {
+    const now = new Date()
+    const hours = now.getHours()
+    colorMode.preference = hours >= 6 && hours < 18 ? 'light' : 'dark'
+    console.log('Automatically set color mode based on current time:', {
+        time: now.toLocaleTimeString(),
+        colorMode: colorMode.preference
+    })
+})
+
 </script>
 
 <template>

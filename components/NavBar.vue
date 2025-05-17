@@ -31,7 +31,7 @@ onMounted(() => {
             <nav class="container justify-between items-center h-14 mx-16 hidden md:flex ">
                 <div class="flex gap-8 items-center">
                     <a href="/">
-                        <img src="@/assets/Logo-50.png" alt="" class="stroke-1">
+                        <img src="@/assets/Logo-50.png" alt="" class="stroke-1 drop-shadow-primary-blue">
                     </a>
                     <menu class="flex gap-5 text-zinc-600 items-center dark:text-zinc-300">
                         <li v-for="item in navigation" :key="item.name">
@@ -50,12 +50,10 @@ onMounted(() => {
                         <img src="../assets/icons/Translate.svg" alt="">
                     </button> -->
                     <button @click="$colorMode.preference = 'dark'" v-show="$colorMode.preference != 'dark'">
-                        <!-- <img src="../assets/icons/Moon.svg" alt=""> -->
                         <line-md-moon-rising-twotone-alt-loop class="icons" />
 
                     </button>
                     <button @click="$colorMode.preference = 'light'" v-show="$colorMode.preference == 'dark'">
-                        <!-- <img src="../assets/icons/Sun.svg" alt=""> -->
                         <line-md-moon-to-sunny-outline-loop-transition class="icons" />
 
                     </button>
@@ -69,7 +67,7 @@ onMounted(() => {
             <div class="md:hidden w-full mx-8 item-center dark:text-white">
                 <div class="h-14 flex justify-between items-center">
                     <a href="/" class="flex">
-                        <img src="../assets/Logo-50.png" alt="" class="stroke-1">
+                        <img src="../assets/Logo-50.png" alt="" class="stroke-1 drop-shadow-primary-blue">
                     </a>
                     <ul class="flex gap-4 items-start pt-2">
                         <li v-show="!showMenu">

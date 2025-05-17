@@ -42,6 +42,9 @@
   .dark-mode .icons {
     @apply text-zinc-300;
   }
+  .drop-shadow-primary-blue:hover{
+    filter: drop-shadow(0 0 2.5em #2760f1);
+  }
   /* pages */
     .content h1 {
       @apply text-primary-blue text-2xl font-medium mb-2 mt-6;

@@ -5,7 +5,7 @@
 @layer base {
   @font-face {
     font-family: "Noto Sans SC";
-    src: url("../fonts/NotoSansSC-VariableFont_wght.ttf")
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap')
       format("truetype-variations");
     font-weight: 100 900;
     font-display: swap;
